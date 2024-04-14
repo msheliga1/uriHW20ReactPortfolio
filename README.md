@@ -94,6 +94,13 @@ Create a student programming portfolio front-end using react and react component
         - Noted App.jsx has Outlet followed by Nav. 
         - Nav Bar would NOT display in 24. Bottom line problem is that page is unresponsive, and must be 2/3rds of display 
             to see Nav-Bar text. Arghhhh.. 
+        - Current Code: main: ReactDOM.createRoot(...render(<App />) 
+                        App.jsx: function App() {<div className="bucket-app" <BucketList /> </div>
+                        No NavBar at all. Not designed for one!
+        - Actitivey 24: main: ReactDOM.createRoot(....render(<RouterProvider router={router} />
+                        App.jsx: function App() function App() {<> <Nav /> <Outlet /> </>
+  
+}
 
     Commit and push files back to gitHub/branch. (For multi-programming: Issue pull request, approve, merge).  
     Deploy code (Settings...CodeAndAnimation->Pages on left, GitHub Pages->Branch->main, save)  
