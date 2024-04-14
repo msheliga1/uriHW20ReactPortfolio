@@ -92,6 +92,8 @@ Create a student programming portfolio front-end using react and react component
         - Noted that act 26 is about testing. 
         - Noted that 24 is more about components, SPA routes and has a navbar. 
         - Noted App.jsx has Outlet followed by Nav. 
+        - Nav Bar would NOT display in 24. Bottom line problem is that page is unresponsive, and must be 2/3rds of display 
+            to see Nav-Bar text. Arghhhh.. 
 
     Commit and push files back to gitHub/branch. (For multi-programming: Issue pull request, approve, merge).  
     Deploy code (Settings...CodeAndAnimation->Pages on left, GitHub Pages->Branch->main, save)  
@@ -110,20 +112,23 @@ Create a student programming portfolio front-end using react and react component
 
 ## Acceptance Criteria   
 -----------------------       
-Create notes or code snippets with or without an internet connection
-WHEN I open my CODE in my CODE editor => I should see a client server folder structure
-WHEN I run `npm run start` from the root directory, application starts up the backend and serves the client
-WHEN I run the text editor applcation from my terminal, my JavaScript files have been bundled using webpack
-WHEN I run my webpack plugins. I have a generated HTML file, service worker, and a manifest file
-    manifest.json is under the dist folder.  Auto created when project is built. 
-WHEN I use next-gen JavaScript in my application. the text editor still functions in the browser (babel)
-WHEN I open the text editor, IndexedDB has immediately created a database storage
-WHEN I enter content and click off of the DOM window. the content in the text editor has been saved with IndexedDB
-WHEN I reopen the text editor after closing it, the content in the text editor has been retrieved from our IndexedDB
-WHEN I click on the Install button, I download my web application as an icon on my desktop
-WHEN I load my web application, I should have a registered service worker using workbox
-WHEN I register a service worker, static assets are pre cached upon loading along with subsequent pages and static assets
-WHEN I deploy to Render, I should have proper build scripts for a webpack application
+DESIRE: single-page application portfolio for a web developer
+Load portfolio => presented with a page containing a header, a section for content, and a footer
+View the header => shown developer's name and navigation with titles corresponding to different sections of the portfolio
+View the nav titles => titles About Me, Portfolio, Contact, and Resume, and title of current section is highlighted
+Click on nav title => corresponding section below the navigation without the page reloading and that title is highlighted
+Load the portfolio the first time => About Me title and section are selected by default
+About Me section => see a recent photo or avatar of the developer and a short bio about them
+Portfolio section => titled images of six applications with links to both the deployed apps and the corresponding GitHub repo
+Contact section => contact form with fields for a name, an email address, and a message
+WHEN I move my cursor out of one of the form fields without entering text
+THEN I receive a notification that this field is required
+WHEN I enter text into the email address field
+THEN I receive a notification if I have entered an invalid email address
+WHEN I am presented with the Resume section
+THEN I see a link to a downloadable resume and a list of the developer’s proficiencies
+WHEN I view the footer
+THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter) 
 
 ## Models (Not Tables) and Data Relationships.  
 ------------------------------------------------  
