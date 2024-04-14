@@ -63,6 +63,8 @@ Create a student programming portfolio front-end using react and react component
         Read the readme.  Found new code in Main. Found my code in Develop (easy now, but pain the first time!)
         Move contents of Main to root. This is a typical structure, and Heroku MUST have a "build" file 
             (ie. package.json) in root. 
+    .gitIgnore: create file if not created. Be sure node_modules is in it. Be sure multiple node_modules for each 
+        package.json file (root, client, server, Main/client, etc.)
     Package.json: Check-Add start, build, etc. to main/package-json. Enables commands to run. 
         "comment" property added at top of file. (Don't think there is another way to comment.)
         Found dev, start, build, lint, preview script commands in package.json. 
