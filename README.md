@@ -87,6 +87,11 @@ Create a student programming portfolio front-end using react and react component
         - Firefox - same caching issue as always.
         - Chrome - Inspect - hard reload. Bucket List comes up. Awesome progress. 
  
+    Create NavBar - main uses App. App uses BucketList.  BucketList uses both BucketForm(props) and Bucket(props). 
+        - Noted that act 28 mini-project is more about forms, lists and saving data.  Not really a large amount of components. 
+        - Noted that act 26 is about testing. 
+        - Noted that 24 is more about components, SPA routes and has a navbar. 
+        - Noted App.jsx has Outlet followed by Nav. 
 
     Commit and push files back to gitHub/branch. (For multi-programming: Issue pull request, approve, merge).  
     Deploy code (Settings...CodeAndAnimation->Pages on left, GitHub Pages->Branch->main, save)  
