@@ -13,7 +13,7 @@ Link to GitHub Repo: https://github.com/msheliga1/uriHW20ReactPortfolio
 [Link to Acceptance Criteria ](#acceptance-criteria)   
 
 ## Project Goals     
-Create a downloadable mutli-stored text editor app using IDB.    
+Create a student programming portfolio front-end using react and react components.     
 
 ========================================================   
 ## Technical Project Details    
@@ -59,19 +59,18 @@ Create a downloadable mutli-stored text editor app using IDB.
             - If refspec error, be sure you changed master to main.
 
     Create a nice long READ.md file!!  (Modify prior projects.)   
-    Determine working mp1428 folder: 
-        Read the readme.  Found new code in Main. Found my code in Develop (sounds simple, but took PITA while.)
+    Determine working mini-project folder: 
+        Read the readme.  Found new code in Main. Found my code in Develop (easy now, but pain the first time!)
+        Move contents of Main to root. This is a typical structure, and Heroku MUST have a "build" file 
+            (ie. package.json) in root. 
+    Package.json: Check-Add start, build, etc. to main/package-json. Enables commands to run. 
+        "comment" property added at top of file. (Don't think there is another way to comment.)
+        Found dev, start, build, lint, preview script commands in package.json. 
+        Only react, vite and es-lint packages. No back-end. No express, web-pack, mongoose, etc. 
+
     NPM: Do "npm init --y" BEFORE "npm install" to avoide ENOENT err.
-    Added start, build, etc. to main/package-json. Enables commands to run. 
-         Do "npm install" (or "nmp i")
-         Tried "npm start" - css load error. 
-         Tried client npm start - same error. 
-         Tried Main "npm run build" - same error. 
-         Lighthouse (non-PWA core ends near L1 39:45)
-         Confirmed project has src and src/js files per Act03. 
-         Noted src/js/index.js file in cleint. Act03 has this but no client or server. 
-         Also noted client/webpack-config.js.  Act 03 has this but no client. 
-         **Found** comment about adding .css stuff in this file. Looking better. 
+        Do "npm install" (or "nmp i")
+
     Put css rule and babel rule in client/webpack.config.js 
         Old css msg now gone. 
         Webpack compiles sucessfully but then just sits there. Arghhh. 
