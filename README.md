@@ -70,99 +70,36 @@ Create a student programming portfolio front-end using react and react component
         Found dev, start, build, lint, preview script commands in package.json. 
         Only react, vite and es-lint packages. No back-end. No express, web-pack, mongoose, etc. 
 
-    NPM: Do "npm init --y" BEFORE "npm install" to avoide ENOENT err.
-        Do "npm install" (or "nmp i")
-
-    Put css rule and babel rule in client/webpack.config.js 
-        Old css msg now gone. 
-        Webpack compiles sucessfully but then just sits there. Arghhh. 
-        Turned off other server but still just 
-        sits there. 
-        Reviewed main pj, client pj,wp. Analagous to mp. 
-        Moved up a directory to main (from client).   Reran npm i, npm start.  Server claims it is coming up!!!! 
-    Could not get rid of old app at localhost/3000.
-        Eventually switched to Chrome and ran incognito mode. 
-    Now says missing server/client/dist/index.html. 
-        Ran npm build, but still missing s/c/d/index.html
-        The server/client seems out of place. 
-        Check mped. It does NOT have server/client, rather server/node_modules and server/routes. 
-        Neither does the new project. 
-        But BOTH have client/dist/index.html files. 
-        Note that htmlRoutes.js BOTH access ../client/dist/index.html. 
-        Confirmed this route is a symptom of the problem. When name changed to index22, error msg includes index22. 
-        Feel confident problem is that something isn't loaded, not the htmlRoutes.js file.  
-    Temporarily changed route, but now see index.html isnt there.  I think I may have to move this myself, or add code to 
-        make it auto-generated. 
-        Going to listen to move class vids as I recall this from class. 
-        Saw Act03 copy index.html to dist folder.  (Better option later.)
-        Copied src/index.html to dist folder. Did NOT change bottom.  Page Now Loads.  Yipee. 
-        Listened to Act 5-6. Showed css and img loaders, which we already included here, but no help with index.index.js being move to dist.
-        Listened to Act 7-10.  Found auto-index htmlWebpackPlugIn in Video 9.  Great. 
-    Listened to Acts 11-12. HRM using npm run dev. Great but not needed for proj. 
-        Noted webpack-dev-server already in client/pj
-        *F(D(ing scripts dont work with #$((RFN!)).  Tried changing main text in index.html. 
-            Then npm run start:dev.  Changes won't NOT only not auto-show-up. They NEVER NEVER show up. 
-            Not even using Chrome, running incognito. 
-            Tried NPM run start.  This builds before starting, and new text shows up in incognito AFTER hitting 
-            refresh button. 
-            After NPM run start tried editing file and saving.  Changes do not auto pop-up. Then tried refreshing 
-            incognito. No changes. Tried new incognito window. No Changes.
-            Summary: NPM run start NEVER updates until restarted. 
-        => Tried adding hmr  
-            - Added to webpack 2 places per Act 11. Added to src/js/index.js at bottom. 
-            - New command "npm run hmr".  Used same cmds as npm run start:dev, but with --only at end. 
-                    "hmr": "webpack-dev-server --only". 
-            - This doesn't work. If one runs npm run build, then "npm run hmr" page updates. 
-            => Saved index.html w "MJS5".  Invoked "npm run hmr". Server starts and page comes up but at localhost:8080. Noticed that Act 11 also had 8080 opened.
-                Page has no service worker error. 
-                - Tried going to 3000, but still getting very old page. (Cache issues.)
-                - Tried going to incognito 3000.  Still has "MJS3". 
-                => Seems like we MUST have an npm run build BEFORE starting server, whether hmr or not. 
-                - Add console.log to src/js/index.js, but this is almost for sure already working.  Does not display in terminal. 
-                - Added build to "npm run hmr" package.json script. This runs the build, displays the 8080 
-                page with the same err as before. The 3000 page has been updated. 
-                - Updated HMR pj dependenc to 4.1.1, since 5.0 bad in activity14.  No effect. 
-        ==> NET result.  HMR is a major PITA.  After about 3 hours of videos and guessing, it's well past time to give up for now and move on.  Maybe the service-worker issues is corrected by other steps. 
-    ==> Figured out how to do "empty cache and hard reload for Chrome, 3000.  This took about 4 tries watching 
-            and rewatching the video.  But am thankful it works, as it prevents having to use incognito, which 
-            takes longer and doesn't allow installs. 
-    ==> Try adding service Worker. 
-            - Added injectManifest(sericeWorker) in webpack. This causes warning: multiple calls to injectMan in hmr 8080. 
-            - Per warning, got rid of --watch from "npm run start" and "webpack --watch".  This did NOT help. 
-            - Added registerRoute code to src-sw.js.  This **seemed** to work. Code still compiles at least. 
-            - 3000 still works.  8080 still gives err msg. 
-            - TESTING: Likely in Act15. Open Dev Chrome Tools. Applicaitons: Service Worker. 
-                (a) There is a source.
-                (b) Status is green. 
-                - Confirmed mine is working. Great. 
-            - Listened to 17-20. Seems that GenerateSW makes a "service worker", while InjectManifest makes a 
-            "complex service worker" better called a manifest. 
-    ==> Not 100% sure what "a generated HTML file, service worker, and a manifest file" are. 
-            - Almost sure a "generated HTML file" is the index.html entry inside dist.
-            - Think that my InjectManifest counts as a service worker. ???? 
-            = Not sure what a "manifest file" is. Perhaps src-sw.js. ????
-    ==> Time for Index DB.  At least want to start this.  
-            - Noted that idb already in client/pj
-            - Found partially complete src/js/database.js file. 
-            - Note that jate shows up in indexDB tab in page console storage tab. 
-    Note: Neither Mike nor Andrew had a soln for the htmlRoutes extra ../ issue, the hmr issue, or the server:dev no build. 
+    Attempt to get code running (index.html page display in this case.)
+    --------------------------------------------------------------------
+    File Structure: 
+        No client or Server
+        root has index.html.  Also vite.config.js seems to connect to port 3000!
+            public only has vite.svg (likely an image)
+        src has App.css, App.jsx, index.css and main.jsx
+            src/assets only has react.svg - likely an svg image. Lots and lots of numbers in this file.
+        src/components has Bucket.jsx, BucketForm.jsx and BucketList.jsx.
+    NPM: "npm init --y" BEFORE "npm install" to avoide ENOENT err.
+        "npm install" (or "nmp i")
+        "npm run build" - seemed to work. Created a dist folder including index.html 
+    - Tried opening dist/index.html ... got a blank page
+    - Tried npm run start => this runs vite, which brings up a server on port 3000! Great. 
+        - Firefox - same caching issue as always.
+        - Chrome - Inspect - hard reload. Bucket List comes up. Awesome progress. 
  
 
     Commit and push files back to gitHub/branch. (For multi-programming: Issue pull request, approve, merge).  
     Deploy code (Settings...CodeAndAnimation->Pages on left, GitHub Pages->Branch->main, save)  
         - Deployed code name always msheliga1/github.io/RepoName !!  
     Make Sure it Works    
-    Insert Screencastify (Chrome) Video, Heroku and/or Screenshot X2 of deployment into readme file.  
+    Insert Screencastify (Chrome) Video, Heroku, Netify and/or Screenshot X2 of deployment into readme file.  
   
 ## Tools and Technologies Used   
     Github - Branches not needed, but could use.    
         - GitIgnore to keep NPM libraries out of gitHub repo.    
     NPM - Node package manager  
-    Manifest - complex service worker
-    ServiceWorker - simple manifest, almost always used for cache  
-    webpack -  Scrunch all the code, images, etc. into one big, ES6 old javascript, file. 
-        - plugins to auto-generated index.html file, service worker and manifest
-    IDB - Interent Database - DB on client side. 
+    React - Components and Single Page App used extensively
+
     Heroku - needs package.json at root level to know how to build. Argghhh. Very last minute change of entire structure.  
         - It would be great if the sample repos were set up to run correctly, and if the .gitignore included /client - /source/node_modules. 
 
