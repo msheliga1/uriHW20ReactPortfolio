@@ -9,7 +9,8 @@ import API from '../utils/API';
 export default function ProfilePage() {
   const [user, setUser] = useState({});
 
-  // The useParams hook will yield an object. Its keys match the parameters defined on each route. Its values match the current URL value in those parameter locations
+  // The useParams hook will yield an object. Its keys match the parameters defined on each route. 
+  // Its values match the current URL value in those parameter locations
   const { id } = useParams();
 
   const fetchData = async () => {
@@ -24,6 +25,7 @@ export default function ProfilePage() {
 
   return (
     <>
+      <p> Contact Form goes here. </p>
       <Container>
         {/* Conditionally render the full profile or a Loading string, depending on whether user data is available */}
         {user.name ? <Profile user={user} /> : <p>Loading...</p>}

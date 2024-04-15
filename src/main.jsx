@@ -6,13 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 // Bringing in the pages the router will use to conditionally show the appropriate views
+// About Me, Portfolio, Contact, and Resume. 
 import App from './App';
 import ErrorPage from './pages/ErrorPage';
-import HomePage from './pages/HomePage';
-import ProfilePage from './pages/ProfilePage';
-import AboutPage from './pages/AboutPage';
+import AboutPage from './pages/AboutPage';  // Default value
+import PortfolioPage from './pages/PortfolioPage';
+import ContactPage from './pages/ContactPage';
+import ResumePage from './pages/ResumePage';
 
 // Define the accessible routes, and which components respond to which URL
+// Old         path: 'profile/:id',
 const router = createBrowserRouter([
   {
     path: '/',
@@ -21,15 +24,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
-      },
-      {
-        path: 'profile/:id',
-        element: <ProfilePage />,
-      },
-      {
-        path: 'about',
         element: <AboutPage />,
+      },
+      {
+        path: 'portfolio',
+        element: <PortfolioPage />,
+      },
+      {
+        path: 'contact',
+        element: <ContactPage />,
+      },
+      {
+        path: 'resume',
+        element: <ResumePage />,
       },
     ],
   },

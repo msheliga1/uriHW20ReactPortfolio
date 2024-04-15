@@ -3,13 +3,8 @@ export default function AboutPage() {
   return (
     <div className="container pt-4">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
-        impedit suscipit sed magnam alias in, repellat expedita hic explicabo
-        architecto soluta. About us Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Velit voluptate exercitationem quaerat pariatur
-        mollitia, excepturi, voluptatem eveniet a dolor nobis ex veniam totam
-        nostrum temporibus ad omnis nam rerum eligendi.
+        I am an experienced computer programmer seeking a job in Java-Spring or the MERN 
+        stack. 
       </p>
       <section className="features-icons bg-light text-center m-4">
         <div className="container">
@@ -52,13 +47,10 @@ export default function AboutPage() {
         </div>
       </section>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
-        impedit suscipit sed magnam alias in, repellat expedita hic explicabo
-        architecto soluta. About us Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Velit voluptate exercitationem quaerat pariatur
-        mollitia, excepturi, voluptatem eveniet a dolor nobis ex veniam totam
-        nostrum temporibus ad omnis nam rerum eligendi.
+        I am very good at problem decompostion as well as undestanding and organizing 
+        high-level concepts. I also like to teach others. I 
+        am a "self-finisher" whose nature is to finish what I have started. It is also 
+        in my nature to analyze and learn more efficient ways to solve problems. 
       </p>
     </div>
   );

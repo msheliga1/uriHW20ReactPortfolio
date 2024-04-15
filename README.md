@@ -115,8 +115,10 @@ Create a student programming portfolio front-end using react and react component
             NPM install, npm run build ... same error. 
         
     ===>  TIME TO GIVE UP AND START WITH ACT 24  <==================
-        - Deleted all, download Act24 files.  
-        - Tried pushing ... repeatedly caused problems.  
+        - Dont want to delete gitHub repo with commit history. 
+        - Deleted all local files, download Act24 files.  
+        - Tried pushing ... repeatedly caused push conflict issues. 
+            - Error msg doesnt say which files. ARGHHHHHHHHHHHHHHH. 
         - Copied README to a non-git directory.
         - Repeated problems.  Finally deleted *everything* locally. 
         - Redid "git init". 
@@ -144,32 +146,23 @@ Create a student programming portfolio front-end using react and react component
     NPM - Node package manager  
     React - Components and Single Page App used extensively
 
-    Heroku - needs package.json at root level to know how to build. Argghhh. Very last minute change of entire structure.  
-        - It would be great if the sample repos were set up to run correctly, and if the .gitignore included /client - /source/node_modules. 
+    Netify - 
 
 ## Acceptance Criteria   
 -----------------------       
-DESIRE: single-page application portfolio for a web developer
+DESIRE: single-page application portfolio for a web developer.
+        About Me, Portfolio, Contact, and Resume. 
 Load portfolio => presented with a page containing a header, a section for content, and a footer
-View the header => shown developer's name and navigation with titles corresponding to different sections of the portfolio
-View the nav titles => titles About Me, Portfolio, Contact, and Resume, and title of current section is highlighted
+View the header => shown developer's name and titles About Me, Portfolio, Contact, and Resume. 
+    Title of current section is highlighted
 Click on nav title => corresponding section below the navigation without the page reloading and that title is highlighted
 Load the portfolio the first time => About Me title and section are selected by default
 About Me section => see a recent photo or avatar of the developer and a short bio about them
 Portfolio section => titled images of six applications with links to both the deployed apps and the corresponding GitHub repo
 Contact section => contact form with fields for a name, an email address, and a message
-WHEN I move my cursor out of one of the form fields without entering text
-THEN I receive a notification that this field is required
+    cursor moved out of one of the form fields without entering text
+    receive a notification that this field is required
 WHEN I enter text into the email address field
-THEN I receive a notification if I have entered an invalid email address
-WHEN I am presented with the Resume section
-THEN I see a link to a downloadable resume and a list of the developer’s proficiencies
-WHEN I view the footer
-THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter) 
-
-## Models (Not Tables) and Data Relationships.  
-------------------------------------------------  
- 
- 
-
-
+    get notification if I have entered an invalid email address
+Resume section - link to a downloadable resume and a list of the developer’s proficiencies
+Footer: has text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter) 
