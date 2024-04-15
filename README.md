@@ -116,7 +116,21 @@ Create a student programming portfolio front-end using react and react component
         
     ===>  TIME TO GIVE UP AND START WITH ACT 24  <==================
         - Deleted all, download Act24 files.  
-        - NPM install, build, start ... ran fine. 
+        - Tried pushing ... repeatedly caused problems.  
+        - Copied README to a non-git directory.
+        - Repeated problems.  Finally deleted *everything* locally. 
+        - Redid "git init". 
+        - Setup remote connection to gitHub. 
+        - Did git pull ori main. 
+        - Kept adding, commit, and pushing in the following order ....
+        - Moved MOST files to subdir.  Excluded pjs, .gitignore and README.md. 
+            - Also moved pjs without trouble.
+        - Used Windows10 to create Act24 Solved folder. 
+            - Deleted dist and node_modules folders. Renamed .gitignore to .gitignore24
+            - Moved all remaining files form Solved to root. 
+            - Copied previously saved README.md
+        - Verified that this now works. NPM intall, npm run build. npm start. 
+        - What an incredible PITA!!  But still have commit history (I think) in gitHub. ARGHHHH!
 
     Commit and push files back to gitHub/branch. (For multi-programming: Issue pull request, approve, merge).  
     Deploy code (Settings...CodeAndAnimation->Pages on left, GitHub Pages->Branch->main, save)  
