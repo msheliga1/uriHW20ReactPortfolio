@@ -99,8 +99,24 @@ Create a student programming portfolio front-end using react and react component
                         No NavBar at all. Not designed for one!
         - Actitivey 24: main: ReactDOM.createRoot(....render(<RouterProvider router={router} />
                         App.jsx: function App() function App() {<> <Nav /> <Outlet /> </>
-  
-}
+        - Tried creating routes by hand typing main.jsx ... an hour plus spent on commas and a missing : after children. 
+
+    Get Main Page to Display - hold off on navBar for time being. 
+        - Created pages subdir. 
+        - First created ErrorPage.  Then HomePage and AboutPage.jsx. 
+        - Problem getting data from        "react-router-dom": "^6.10.0".  
+        - Copied this singe dep to package.json.  => roll-up error during build: in ErrorPage, not in index
+            "useRouterError" is not exported by "node_modules/react-router-dom/dist/index.js"
+        - Copied entire package.json from act24. Still get roll-up error.
+            - Copied the file from act24 to hw. Stlll get roll-up-error. 
+            - Copied vite.config.ts from act24 to hw ... files seemed identical. Still get error. 
+        - Deleted entire dist folder. NPM i, npm run build, still gives same error. 
+        - Deleted entire node_modules directory (PITA with permissions.) Also package-json.lock. 
+            NPM install, npm run build ... same error. 
+        
+    ===>  TIME TO GIVE UP AND START WITH ACT 24  <==================
+        - Deleted all, download Act24 files.  
+        - NPM install, build, start ... ran fine. 
 
     Commit and push files back to gitHub/branch. (For multi-programming: Issue pull request, approve, merge).  
     Deploy code (Settings...CodeAndAnimation->Pages on left, GitHub Pages->Branch->main, save)  
