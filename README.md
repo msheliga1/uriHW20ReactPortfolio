@@ -145,8 +145,7 @@ Create a student programming portfolio front-end using react and react component
         - GitIgnore to keep NPM libraries out of gitHub repo.    
     NPM - Node package manager  
     React - Components and Single Page App used extensively
-
-    Netify - 
+    Netlify - Another new way to deploy. 
 
 ## Acceptance Criteria   
 -----------------------       
