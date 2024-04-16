@@ -1,10 +1,13 @@
 # Programmer Portfolio with React  
 uri bootcamp HW 20 - Programmer Student Portfolio Front End using React Components - MJS 4.15.24    
 Michael Sheliga - This repo is for the University of Richmond (URI) coding bootcamp.  
-Starter Code: Used some Act 20-28 MP code for help. 
+Starter Code: Used some Act 20-28 MP code for help. Due to roll-up error and other factors, 
+switched to Act 20-24. 
 
-## Link to Repo, Screenshot(s) and/or Video(s)    
-Link to GitHub Repo: https://github.com/msheliga1/uriHW20ReactPortfolio    
+## Link to Repo, Deployment(s) Screenshot(s) and/or Video(s)    
+Link to GitHub Repo: https://github.com/msheliga1/uriHW20ReactPortfolio   
+Link to Netlify Deployment: https://mjs-urihw20-react-portfolio.netlify.app   
+(Hey, it works and even allows a decent name!) 
 <!-- Link to Video on Google Drive: https://drive.google.com/file/d/1jcrSLjZJ3evW8Ss2wuIrIy4JPc4SDk_M/view --> 
 <!---  Link to deployed github.io site. https://msheliga1.github.io/uriHW9NodeReadmeGen --->  
 <!-- Link to Heroku: https://uri-hw-19-jate-idb-pwa-9db53dc82bbb.herokuapp.com/   --> 
@@ -109,7 +112,7 @@ Create a student programming portfolio front-end using react and react component
             "useRouterError" is not exported by "node_modules/react-router-dom/dist/index.js"
         - Copied entire package.json from act24. Still get roll-up error.
             - Copied the file from act24 to hw. Stlll get roll-up-error. 
-            - Copied vite.config.ts from act24 to hw ... files seemed identical. Still get error. 
+            - Copied vite.config.ts from act24 to hw ... files seemed identical. Still get error. 0
         - Deleted entire dist folder. NPM i, npm run build, still gives same error. 
         - Deleted entire node_modules directory (PITA with permissions.) Also package-json.lock. 
             NPM install, npm run build ... same error. 
@@ -134,9 +137,13 @@ Create a student programming portfolio front-end using react and react component
         - Verified that this now works. NPM intall, npm run build. npm start. 
         - What an incredible PITA!!  But still have commit history (I think) in gitHub. ARGHHHH!
 
+        - Once I found the routes (which I'd been working on before - duuuuuuh), I was 
+        able to modify them and create dummy pages. Yipeeeeeeeeeeeeeee! 
+
     Commit and push files back to gitHub/branch. (For multi-programming: Issue pull request, approve, merge).  
     Deploy code (Settings...CodeAndAnimation->Pages on left, GitHub Pages->Branch->main, save)  
-        - Deployed code name always msheliga1/github.io/RepoName !!  
+        - Deployed code name always msheliga1/github.io/RepoName !! 
+        = Used Netlify.  Direction in act 20-27 somewhat shakey, but got it to run. Yipeeee!  
     Make Sure it Works    
     Insert Screencastify (Chrome) Video, Heroku, Netify and/or Screenshot X2 of deployment into readme file.  
   
@@ -145,7 +152,8 @@ Create a student programming portfolio front-end using react and react component
         - GitIgnore to keep NPM libraries out of gitHub repo.    
     NPM - Node package manager  
     React - Components and Single Page App used extensively
-    Netlify - Another new way to deploy. 
+    Netlify - Another new way to deploy. Does hot changes (unlike Heroku which requires a push). 
+        Also allows deployment name change. 
 
 ## Acceptance Criteria   
 -----------------------       
